@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 
+
 function LoginForm() {
     const [form, setForm] = useState({
         username: '',
         password: '',
-        phone: ''
+        phoneNumber: ''
       });
 
     
@@ -19,9 +20,10 @@ function LoginForm() {
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/api/login', form)
+        axios.post(`https://plant-water-tracker.herokuapp.com/api/users`, form)
             .then((res) => {
-                console.log(res);
+                localStorage.setItem("authToken", res.data.token)
+                console.log(res)
             })
             .catch((err) => {
                 console.log({ err })
@@ -50,13 +52,13 @@ function LoginForm() {
                 </label>
                 <label>Phone Number
                     <input
-                        name='phone'
+                        name='phoneNumber'
                         type='tel'
                         onChange={handleChange}
-                        value={form.phone}
+                        value={form.phoneNumber}
                     />
                 </label>
-                <button type="submit">submit</button>
+                <button>submit</button>
             </form>
         </div>
     )

@@ -1,0 +1,89 @@
+.header {
+    padding-top: 2%;
+    font-size: 1.5rem;
+}
+
+.header-navs {
+    display: flex;
+    justify-content: space-around;
+}
+
+#home {
+    color:aqua;
+    flex: 1;
+    background-color:  #282c34;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
+#home:hover,
+#home:focus {
+    background-color: #fff;
+    color: #333;
+}
+
+#login {
+    color:aqua;
+    flex: 1;
+    background-color:  #282c34;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
+#login:hover,
+#login:focus {
+    background-color: #fff;
+    color: #333;
+}
+
+#signup {
+    color:aqua;
+    flex: 1;
+    background-color:  #282c34;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
+#signup:hover,
+#signup:focus {
+    background-color: #fff;
+    color: #333;
+}
+
+#logout {
+    color:aqua;
+    flex: 1;
+    background-color:  #282c34;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
+#logout:hover,
+#logout:focus {
+    background-color: #fff;
+    color: #333;
+}
+
+#plantlist {
+    color:aqua;
+    flex: 1;
+    background-color:  #282c34;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .5s ease-out;
+}
+
+#plantlist:hover,
+#plantlist:focus {
+    background-color: #fff;
+    color: #333;
+}

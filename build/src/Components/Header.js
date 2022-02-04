@@ -1,17 +1,29 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import "../styles/Header.css"
 
 function Header() {
+    const logout = () => {
+        localStorage.removeItem("token");
+        window.location.href = "/";
+    };
 
     return(
-        <header className="App-header">
-            <h1>Water My Plants</h1>
-            <nav className="header-nav">
-                <Link to='/'><button className='button'>Home</button></Link>
-                <Link to='/login'><button className='button'>login</button></Link>
-                <Link to='/signup'><button className='button'>Sign Up</button></Link>
-            </nav>
-        </header>
+        <div className='header'>
+                <nav className="header-navs">
+                    <Link id="home" to='/home'>Home</Link>
+                    <Link id='plantlist' to='/plantlist'>PlantList</Link>
+
+                    {!localStorage.getItem('token') &&
+                    <Link id="login" to='/login'>login</Link>}
+
+                    {!localStorage.getItem("token") &&
+                    <Link id="signup" to='/signup'>Sign Up</Link>}
+
+                    {localStorage.getItem("token") && 
+                        <a id="logout" href="/" onClick={logout}>Logout</a>}
+                </nav>
+        </div>
     )
 }
 
